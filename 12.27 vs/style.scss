@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left,#1ca1ee, #a7b8dd);
+    z-index: -1;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 1fr 1fr 10%;//template 模板 columns 欄
+    min-height: 10vh;// nav 的高變長
+    color: white;
+    align-items: center;//垂直對中
+
+    .logo-container{
+        grid-column: 2/3;
+        // font-size: 24px;
+
+        img{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    // .fa-bars{
+    //     justify-self: end;
+    // }
+
+
+}
+
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+
+    .hero{
+        height: 60%;
+        width: 100%;
+        position: relative;
+        //transform: scaleY(1.2); 如果照片太扁
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .headline{
+            position: absolute;
+            top: 70%;
+            left: 10%;
+            font-size: 100px;
+            transform: translate(-20%,-70%);
+            color: white;
+            z-index: 3;
+        }
+
+        &::after{
+            content: "";
+            background: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.4;
+            left: 0;
+            right: 0;
+        }
+    }
+
+}

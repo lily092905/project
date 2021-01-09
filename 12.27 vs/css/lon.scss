@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background: rgb(148, 78, 13);
+    color: rgb(245, 200, 171);
+    font-family: 'poppins';
+    margin: 0;
+    //padding: 14em 14em 14em 20em;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    //margin: 10rem;
+    .pic1{
+        img{
+            width: 30rem;
+            position: absolute;
+            z-index: -2;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        
+        }
+    }
+    
+    // .pic2 {
+    //     display: flex;
+    //     flex-direction: row;
+    //     display: grid;
+    //     grid-gap: 2em;
+    //     width: 95%;
+    //     margin: 0 auto; 
+        
+
+    //     img{
+            
+    //         width: 5rem;
+    //         height:  auto;
+    
+    //     }
+    // }
+    
+    // .circle{
+    //     position: absolute;
+    //     top: 200px;
+    //     left: 200px;
+    //     width: 400px;
+    //     height: 400px;
+    //     background: rgb(160, 59, 255);
+    //     border-radius: 50%;
+    //     z-index: -1;
+    // }
+    
+    .container{
+        height: 28rem;
+        display: inline-block;//inline不行
+        background: rgba(255, 255, 255,0.2);
+        padding: 3rem;
+        border-radius: 4rem; //沒有編ㄐㄧ
+        position: relative;
+        z-index: 1; 
+        backdrop-filter: blur(40px);
+        border: solid 2px transparent;//透明
+        background-clip: padding-box;//有這個才有上面
+        box-shadow: 10px 10px 10px rgba(46,54,68,0.1);
+    
+        h3{
+            position: relative;
+            font-size: 2.7rem;
+            margin: 0 auto;
+        }
+    
+        p{
+            font-size: 1.6rem;
+
+            margin: 0 auto;
+        }
+    }
+    
+    h2{
+        margin-left: 15rem;
+        font-size: 5rem;
+        clip-path: inset(0 0 0 0);
+    }
+
+    p{
+        margin-left: 7rem;
+    }
+
+    .haah{
+        left: 60rem;
+        // display: flex;
+        top: 0.5rem;
+        margin-left: 3rem;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        img{
+            margin: 0.3rem auto;
+            padding: 1rem;
+            width: 10rem;
+            height: 9rem;
+    
+        }
+
+        
+    }
+
+    .door{
+      img{
+        width: 3rem;
+        height: 3rem;
+      }
+      
+    }
+}
+
+@media screen and (min-width: 480px) { 
+
+  
+  body{
+    font-size: 1.6rem;
+  }
+
+  
+  .haah{
+    .pic2 {
+     
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+  }
+} 
+
+
+
+
+
+@media screen and (min-width: 768px) { 
+
+
+  body{
+    font-size: 1.8rem;
+  }
+
+  .haah{
+    .pic2 {
+     
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+  }
+} 
+
+
+@media screen and (min-width: 1024px) { 
+
+  .container{
+    height: 90rem;
+  }
+
+ 
+  body{
+    font-size: 2rem;
+  }
+
+  
+  .haah{
+    .pic2 {
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+      grid-gap: 1rem;
+    }
+  }
+} 
+@media screen and (min-width: 1224px) { 
+
+
+  body{
+    font-size: 2.2rem;
+  }
+
+
+  .haah{
+    .pic2 {
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-gap: 1rem;
+    }
+  }
+}

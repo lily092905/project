@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mon.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="pic1">
+            <img class="pic1" src="./mon/2.jpg" alt="abstract-background">
+        </div>
+    
+        <div class="container" id="glass">
+            <h2 class="seq">腸粉</h2>
+            <p class="seq">我們最愛的小吃</p>
+        </div>
+    
+        <h1>侯婉妤</h1>
+        <div class="haah">
+            <div class="pic2">
+                <img class="pic3" src="./mon/3.jpg" alt="">
+                <img class="pic3" src="./mon/4.jpg" alt="">
+                <img class="pic3" src="./mon/5.jpg" alt="">
+                <img class="pic3" src="./mon/6.jpg" alt="">
+            </div>
+            <div class="intro">
+            <p>回憶錄:小時候看到路邊有小鳥被車輾過去，她都會拿著一雙筷子跟紙碗過去想把牠埋葬，但她卻不敢夾起來，每次都是我幫她夾到碗裡，然後再去山上找個好地方埋起來，我們直到現在都還有這習慣，最近期的是今年暑假才又埋了一隻，我想大概是她家裡有養綠繡眼的緣故吧。</p>
+            </div>
+        </div>
+        <div class="door">
+            <a href="./index.html"><img src="./88.png" alt=""></a>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <script>
+        const glass = document.getElementById('glass');
+
+        const tl = gsap.timeline({defaults: {ease:"power2.inOut", duration:1.5}});
+
+        tl.from('.pic1', {x:'-10%', opacity:0})
+          .from('.container', {opacity:0, delay: .5, duration: 1}, "-=1.5")
+          .from('.container', {x: '-20%', backdropFilter: 'blur(0px)'})
+          .from('.seq',{y:-30, opacity:0, stagger:.2, duration: .5}, "-=.5" )//stagger錯開   duration掉下來的速度
+          .from('h1', {y: 20, clipPath: 'inset(0 0 100% 0)'}, "-=.8")
+          .from('.pic3', {x:'10%', opacity:0})
+          .from('.intro',{y:30, opacity:0, stagger:.2, duration: .5}, "-=.5" );
+          
+
+    </script>
+</body>
+</html>

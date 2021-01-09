@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #693333;
+  color: #d57878;
+  font-family: "poppins";
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+}
+.header .pic1 img {
+  position: absolute;
+  z-index: -2;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.header .container {
+  height: 30rem;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3rem;
+  border-radius: 4rem;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.1);
+}
+.header .container h2 {
+  font-size: 1.7em;
+  margin: 0;
+}
+.header .container p {
+  margin: 0;
+}
+.header h1 {
+  margin-left: 7rem;
+  font-size: 4rem;
+  clip-path: inset(0 0 0 0);
+}
+.header p {
+  margin-left: 7rem;
+}
+.header .haah {
+  top: 0.5rem;
+  margin-left: 8rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .haah img {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 10rem;
+  height: 9rem;
+}
+.header .haah .intro {
+  width: 100%;
+  height: 100%;
+}
+.header .door img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .haah .pic2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  .haah .pic2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    height: 90rem;
+  }
+
+  body {
+    font-size: 2rem;
+  }
+
+  .haah .pic2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1224px) {
+  body {
+    font-size: 2.2rem;
+  }
+
+  .haah .pic2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
